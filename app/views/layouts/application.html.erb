@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Debt Sheet</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <%= link_to("The Debt Sheet", accounts_path, :class => "navbar-brand") %>
+          </div>
+
+          <div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to("Accounts", "#") %></li>
+              <li><%= link_to("Events", "#") %></li>
+              <li><%= link_to("New account", "#") %></li>
+              <li><%= link_to("New payment", "#") %></li>
+              <li><%= link_to("New purchase", "#") %></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>
